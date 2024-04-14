@@ -1,0 +1,119 @@
+4, 5, 6. 
+cd SI_2024_lab1_222029/
+git init
+echo "# Bobi Galikj 222029" >> README.md
+git add README.md
+git commit -m "first commit"
+
+*dopolnitelno pobara:
+git config --global user.email "bobi.galic@yahoo.com"
+git config --global user.name "Avatarus23"
+
+git commit -m "first commit"
+git status
+git branch -M master
+git remote add origin https://github.com/Avatarus23/SI_2024_lab1_222029.git
+git push -u origin master
+
+git add .
+git commit -m "Initial commit" (prv commit na README.txt)
+
+7.
+git add .
+git status
+git commit -m "Add starter code"
+
+8.
+git push origin master
+
+9.
+git checkout master
+git checkout -b bug1 (granka bug1 se kreira od master)
+git checkout master
+git checkout -b bug2 (granka bug2 se kreira od master)
+
+10.
+git checkout bug1
+
+11.popravame greska
+git add .
+git commit -m "Fix wrong condition in filterOddLengthStrings"
+
+12.
+git checkout bug2
+
+13.popravame greska
+git add .
+git commit -m "Fix wrong condition in makeBigStringFrom" (commit posle promena)
+
+14.
+git checkout bug1
+
+15.
+git add .
+git commit -m "Call method filterOddLengthStrings in main class" (commit posle promena)
+
+16.
+git checkout bug2
+
+17.
+git add .
+git commit -m "Call method makeBigStringFrom in main class" (commit na bug2 so nova promena)
+
+18.
+git checkout bug1
+git push origin bug1
+
+git checkout bug2
+git push origin bug2
+
+19.
+git checkout master
+
+20.
+git merge bug1
+
+21.
+git push origin master
+
+22.
+git checkout bug2
+
+23.
+git rebase master
+
+output:
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 70154d5... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 70154d5... Call method makeBigStringFrom in main class
+
+*manuelno ja popravivme greskata vo SILab1Main.java
+
+git add .
+git commit -m "Fixed conflicts bug2"
+git rebase --continue
+
+24.
+git checkout master
+
+25.
+git merge bug2
+
+26.
+git push origin master
+
+28.
+git log > logs.txt
+
+*go dodavame i 222029.txt i posleden commit
+
+git add .
+git commit -m "Final commit"
+
+25. 
+git push origin master
